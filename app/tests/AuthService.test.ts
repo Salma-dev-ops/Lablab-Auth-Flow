@@ -1,17 +1,16 @@
-export class AuthService {
-    login(username: string, password: string): string | null {
-      if (username && password) {
-        return "afro-token-" + Date.now();
-      }
-      return null;
-    }
-  
-    logout(): void {
-      localStorage.removeItem("token");
-    }
-  
-    getToken(): string | null {
-      return localStorage.getItem("token");
-    }
-  }
+import { AuthService } from "../../src/services/AuthService";
+
+test("login returns a token for valid credentials", () => {
+  const service = new AuthService();
+  const token = service.login("user", "pass");
+  expect(token).toContain("afro-token-");
+});
+
+test("logout removes token from localStorage", () => {
+  const service = new AuthService();
+  localStorage.setItem("token", "fake");
+  service.logout();
+  expect(localStorage.getItem("token")).toBeNull();
+});
+
   
