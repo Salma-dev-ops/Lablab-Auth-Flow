@@ -1,19 +1,29 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import AuthForm from "../../src/components/AuthForm";  // ✅ Updated path
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import AuthForm from "../../src/components/AuthForm";
 
-test("renders login form and submits", () => {
-  const mockLogin = vi.fn();
-  render(<AuthForm onLogin={mockLogin} />);
+describe("AuthForm Component", () => {
+  test("renders login form and submits", async () => {
+    const user = userEvent.setup();
+    const mockLogin = vi.fn();
 
-  const usernameInput = screen.getByPlaceholderText("Username");
-  const passwordInput = screen.getByPlaceholderText("Password");
-  const button = screen.getByText("Login");
+    render(<AuthForm onLogin={mockLogin} />);
 
-  fireEvent.change(usernameInput, { target: { value: "salma" } });
-  fireEvent.change(passwordInput, { target: { value: "1234" } });
-  fireEvent.click(button);
+    // Fill email
+    const emailInput = screen.getByTestId("email-input");
+    await user.type(emailInput, "test@example.com");
 
-  expect(mockLogin).toHaveBeenCalledWith("salma", "1234");
+    // Fill password
+    const passwordInput = screen.getByTestId("password-input");
+    await user.type(passwordInput, "password123");
+
+    // Submit the form
+    const form = screen.getByTestId("login-form");
+    await user.submit(form);
+
+    // Assert the login handler was called with the right arguments
+    expect(mockLogin).toHaveBeenCalledTimes(1);
+    expect(mockLogin).toHaveBeenCalledWith("test@example.com", "password123");
+  });
 });
-
-

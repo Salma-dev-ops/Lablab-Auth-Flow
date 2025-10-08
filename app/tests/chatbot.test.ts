@@ -1,7 +1,6 @@
-import { chatbotEcho } from "../../src/ai/chatbot";
+import { chatbot } from "../../src/ai/chatbot";
 
-test("chatbot echoes the input", () => {
-  const response = chatbotEcho("Hello AfroBot");
-  expect(response).toContain("Hello AfroBot");
+test("chatbot echoes messages", () => {
+  const response = chatbot("Hello AI");
+  expect(response).toBe("Echo: Hello AI");
 });
-
