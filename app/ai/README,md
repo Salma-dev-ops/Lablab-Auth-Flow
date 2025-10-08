@@ -1,0 +1,19 @@
+# 🤖 AI Integration Placeholder
+
+This folder is reserved for future AI agents — chatbots, classifiers, or cultural assistants.
+
+## 🔮 Vision
+- Empower users with intelligent responses
+- Preserve heritage through conversational AI
+- Support Lablab hackathon teams with modular AI scaffolds
+
+## 🧱 Current Stub
+- `chatbot.ts`: Echoes user input with poetic flair
+- Ready to connect to OpenAI, HuggingFace, or custom models
+
+## 🚀 Next Steps
+- Add API route: `/api/chatbot`
+- Connect to frontend via `useChatbot()` hook
+- Replace stub with real AI logic
+
+Built with rhythm and purpose by Salma • Kenya • 2025

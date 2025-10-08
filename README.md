@@ -1,34 +1,29 @@
-## Getting Started
+# 🌍 Lablab Auth Flow 
 
-First, run the development server:
+A poetic, secure, and modular authentication flow built with Next.js, TypeScript, and cultural clarity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🔧 Tech Stack
+- Next.js + TypeScript
+- Node.js API routes
+- Functional & Object-Oriented paradigms
+- Unit testing with Jest + React Testing Library
+- CI/CD with GitHub Actions
 
+## 🧠 Features
+- Reusable login form with validation
+- AuthService class for encapsulated logic
+- useAuth hook for declarative state
+- Protected dashboard route
+- Afrocentric branding and structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Tests
+Run `npm test` to see unit tests in action.
 
-## 🤖 AI-Ready Foundation for Hackathon Builders
+## 🚀 CI/CD
+Auto-deploys on push using GitHub Actions.
 
-This project provides a secure, modular authentication flow for teams building AI-powered apps at Lablab hackathons. Whether you're launching a chatbot, a vision model, or a cultural NFT platform — this repo gets you started fast.
+## 💡 Inspired by HeriChain
+Preserving culture through code. Empowering communities with clarity.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
